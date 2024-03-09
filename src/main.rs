@@ -8,3 +8,6 @@ mod tests {
     mod test_parsing;
     mod test_patterns;
 }
+fn main(){
+    
+}

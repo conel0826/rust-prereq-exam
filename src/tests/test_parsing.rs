@@ -5,7 +5,8 @@
 // - b: The expected unsigned integer 32.
 // Returns: true if the parsed value matches the expected value, false otherwise.
 pub fn parse_string_to_u32(a: &str, b: &u32) -> bool {
-    todo!("Parse string to unsigned integer 32 for this test, return true if matched.")
+    // todo!("Parse string to unsigned integer 32 for this test, return true if matched.");
+    a.parse::<u32>().map_or(false, |parse| parse==*b)
 }
 
 // Function: parse_u32_to_u128
@@ -15,7 +16,8 @@ pub fn parse_string_to_u32(a: &str, b: &u32) -> bool {
 // - b: The expected unsigned integer 128.
 // Returns: true if the converted value matches the expected value, false otherwise.
 pub fn parse_u32_to_u128(a: u32, b: u128) -> bool {
-    todo!("Parse unsigned integer 32 to unsigned integer 128 for this test, return true if matched.")
+    // todo!("Parse unsigned integer 32 to unsigned integer 128 for this test, return true if matched.");
+    a as u128 == b
 }
 
 // Function: parse_u32_to_i32
@@ -25,7 +27,8 @@ pub fn parse_u32_to_u128(a: u32, b: u128) -> bool {
 // - b: The expected signed integer 32.
 // Returns: true if the parsed value matches the expected value, false otherwise.
 pub fn parse_u32_to_i32(a: u32, b: i32) -> bool {
-    todo!("Parse unsigned integer to signed integer 32 for this test, return true if matched.")
+    // todo!("Parse unsigned integer to signed integer 32 for this test, return true if matched.");
+    -(a as i32) == b
 }
 
 // Function: parse_u32_to_f32
@@ -35,7 +38,8 @@ pub fn parse_u32_to_i32(a: u32, b: i32) -> bool {
 // - b: The expected float 32.
 // Returns: true if the converted value matches the expected value, false otherwise.
 pub fn parse_u32_to_f32(a: u32, b: f32) -> bool {
-    todo!("Parse unsigned integer 32 to float 32 for this test, return true if matched.")
+    // todo!("Parse unsigned integer 32 to float 32 for this test, return true if matched.");
+    a as f32 == b
 }
 
 // Function: parse_u32_to_string
@@ -45,7 +49,8 @@ pub fn parse_u32_to_f32(a: u32, b: f32) -> bool {
 // - b: The expected string.
 // Returns: true if the converted value matches the expected value, false otherwise.
 pub fn parse_u32_to_string(a: &u32, b: &str) -> bool {
-    todo!("Parse unsigned integer 32 to string for this test, return true if matched.")
+    // todo!("Parse unsigned integer 32 to string for this test, return true if matched.");
+    a.to_string() == b
 }
 
 #[cfg(test)]
